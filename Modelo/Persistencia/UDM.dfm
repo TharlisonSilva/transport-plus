@@ -30,8 +30,8 @@ object dmEntra21: TdmEntra21
       'LibraryName=dbx4fb.dll'
       'VendorLib=fdbclient.dll'
       
-        'Database=localhost:C:\Users\Tales\Documents\Projetos\transport-p' +
-        'lus\DB\TRANSPORTPLUS.FDB'
+        'Database=localhost:D:\Projeto\transport-plus\BD\TRANSPORTPLUS.FD' +
+        'B'
       'User_Name=sysdba'
       'Password=masterkey'
       'Role=RoleName'
@@ -48,7 +48,6 @@ object dmEntra21: TdmEntra21
       'ServerCharSet=UTF8'
       'Trim Char=False')
     VendorLib = 'fbclient.dll'
-    Connected = True
     Left = 32
     Top = 24
   end

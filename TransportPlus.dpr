@@ -32,7 +32,7 @@ uses
 
 begin
   Application.Initialize;
-  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.CreateForm(TdmEntra21, dmEntra21);
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.Run;
 end.

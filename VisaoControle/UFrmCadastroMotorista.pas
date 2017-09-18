@@ -121,6 +121,7 @@ var
   loCIDADE: TCIDADE;
 begin
   FMOTORISTA.CIDADE.ID := 0;
+  stNomeCidade.Caption := EmptyStr;
   if StrToIntDef(edCidade.Text, 0) <> 0 then
     try
       loCIDADE := TCIDADE(FRepositorioCidade.Retorna(StrToIntDef(edCidade.Text, 0)));
@@ -144,7 +145,8 @@ procedure TFrmCadastroMotorista.edCidadeNascimentoExit(Sender: TObject);
 var
   loCIDADE: TCIDADE;
 begin
-  FMOTORISTA.CIDADE.ID := 0;
+  FMOTORISTA.CIDADE_NASCIMENTO.ID := 0;
+  stNomeCidadeNascimento.Caption  := EmptyStr;
   if StrToIntDef(edCidadeNascimento.Text, 0) <> 0 then
     try
       loCIDADE := TCIDADE(FRepositorioCidade.Retorna(StrToIntDef(edCidadeNascimento.Text, 0)));
@@ -152,8 +154,8 @@ begin
         raise EValidacaoNegocio.Create('Cidade informada não foi encontrada')
       else
         begin
-          FMOTORISTA.CIDADE              := loCIDADE;
-          stNomeCidadeNascimento.Caption := FMOTORISTA.CIDADE.NOME;
+          FMOTORISTA.CIDADE_NASCIMENTO   := loCIDADE;
+          stNomeCidadeNascimento.Caption := FMOTORISTA.CIDADE_NASCIMENTO.NOME;
         end;
     except
       on E: Exception do
@@ -215,7 +217,7 @@ begin
   FMOTORISTA.CELULAR             := edCelular.Text;
   FMOTORISTA.ENDERECO            := edEndereco.Text;
   FMOTORISTA.BAIRRO              := edBairro.Text;
-  FMOTORISTA.CEP                 := StrToIntDef(edCep.Text, 0);
+  FMOTORISTA.CEP                 := edCep.Text;
   FMOTORISTA.CPF                 := edCpf.Text;
   FMOTORISTA.RG                  := edRG.Text;
   FMOTORISTA.ORGAO_EXPEDIDOR     := edOrgaoExpedidor.Text;
@@ -234,7 +236,7 @@ begin
   edCelular.Text            := FMOTORISTA.CELULAR;
   edEndereco.Text           := FMOTORISTA.ENDERECO;
   edBairro.Text             := FMOTORISTA.BAIRRO;
-  edCep.Text                := IntToStr(FMOTORISTA.CEP);
+  edCep.Text                := FMOTORISTA.CEP;
   edCpf.Text                := FMOTORISTA.CPF;
   edRG.Text                 := FMOTORISTA.RG;
   edOrgaoExpedidor.Text     := FMOTORISTA.ORGAO_EXPEDIDOR;
