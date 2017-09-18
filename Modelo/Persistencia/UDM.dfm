@@ -29,7 +29,9 @@ object dmEntra21: TdmEntra21
       'GetDriverFunc=getSQLDriverINTERBASE'
       'LibraryName=dbx4fb.dll'
       'VendorLib=fdbclient.dll'
-      'Database=localhost:T:\Projetos\Aeroporto\DB\AEROPORTO.FDB'
+      
+        'Database=localhost:C:\Users\Tales\Documents\Projetos\transport-p' +
+        'lus\DB\TRANSPORTPLUS.FDB'
       'User_Name=sysdba'
       'Password=masterkey'
       'Role=RoleName'
@@ -43,9 +45,10 @@ object dmEntra21: TdmEntra21
       'BlobSize=-1'
       'ErrorResourceFile='
       'RoleName=RoleName'
-      'ServerCharSet='
+      'ServerCharSet=UTF8'
       'Trim Char=False')
     VendorLib = 'fbclient.dll'
+    Connected = True
     Left = 32
     Top = 24
   end

@@ -3,8 +3,8 @@ object FrmCRUD: TFrmCRUD
   Top = 0
   Caption = 'Cadastro de'
   ClientHeight = 379
-  ClientWidth = 635
-  Color = clSilver
+  ClientWidth = 637
+  Color = 14540253
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -24,7 +24,7 @@ object FrmCRUD: TFrmCRUD
   object pnlCabecalho: TPanel
     Left = 0
     Top = 0
-    Width = 635
+    Width = 637
     Height = 28
     Align = alTop
     Color = clGray
@@ -33,8 +33,10 @@ object FrmCRUD: TFrmCRUD
     Font.Height = -16
     Font.Name = 'Tahoma'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 635
     object lbCabecalho: TLabel
       Left = 8
       Top = 5
@@ -52,19 +54,23 @@ object FrmCRUD: TFrmCRUD
   object gbLocalizar: TGroupBox
     Left = 0
     Top = 28
-    Width = 635
+    Width = 637
     Height = 58
     Align = alTop
     Caption = ' Localizar '
+    Color = 14540253
     Ctl3D = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
+    ParentBackground = False
+    ParentColor = False
     ParentCtl3D = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 635
     object lbCodigo: TLabel
       Left = 65
       Top = 24
@@ -116,7 +122,7 @@ object FrmCRUD: TFrmCRUD
   object pnlBotoes: TPanel
     Left = 0
     Top = 338
-    Width = 635
+    Width = 637
     Height = 41
     Align = alBottom
     Color = clSilver
@@ -125,13 +131,15 @@ object FrmCRUD: TFrmCRUD
     Font.Height = -16
     Font.Name = 'Tahoma'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitWidth = 635
     DesignSize = (
-      635
+      637
       41)
     object btnLimpar: TBitBtn
-      Left = 400
+      Left = 402
       Top = 4
       Width = 115
       Height = 35
@@ -162,9 +170,10 @@ object FrmCRUD: TFrmCRUD
       ParentFont = False
       TabOrder = 3
       OnClick = btnLimparClick
+      ExplicitLeft = 400
     end
     object btnExcluir: TBitBtn
-      Left = 283
+      Left = 285
       Top = 4
       Width = 115
       Height = 35
@@ -195,9 +204,10 @@ object FrmCRUD: TFrmCRUD
       ParentFont = False
       TabOrder = 2
       OnClick = btnExcluirClick
+      ExplicitLeft = 283
     end
     object btnGravar: TBitBtn
-      Left = 166
+      Left = 168
       Top = 4
       Width = 115
       Height = 35
@@ -228,9 +238,10 @@ object FrmCRUD: TFrmCRUD
       ParentFont = False
       TabOrder = 1
       OnClick = btnGravarClick
+      ExplicitLeft = 166
     end
     object btnSair: TBitBtn
-      Left = 517
+      Left = 519
       Top = 4
       Width = 115
       Height = 35
@@ -261,6 +272,7 @@ object FrmCRUD: TFrmCRUD
       ParentFont = False
       TabOrder = 4
       OnClick = btnSairClick
+      ExplicitLeft = 517
     end
     object btnNovo: TBitBtn
       Left = 4

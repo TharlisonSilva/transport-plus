@@ -13,8 +13,11 @@ type
     mmPrincipal: TMainMenu;
     miSair: TMenuItem;
     sbPrincipal: TStatusBar;
+    miCadastro: TMenuItem;
+    miMotorista: TMenuItem;
     procedure miSairClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure miMotoristaClick(Sender: TObject);
   private
     { Private declaration }
   public
@@ -29,9 +32,15 @@ implementation
 uses
     UDM
   , DB
+  , UFrmCadastroMotorista
   ;
 
 {$R *.dfm}
+
+procedure TFrmPrincipal.miMotoristaClick(Sender: TObject);
+begin
+  Application.CreateForm(TFrmCadastroMotorista, FrmCadastroMotorista);
+end;
 
 procedure TFrmPrincipal.miSairClick(Sender: TObject);
 begin
