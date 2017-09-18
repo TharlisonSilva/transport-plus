@@ -5,7 +5,8 @@ object frmPesquisa: TfrmPesquisa
   Caption = 'Pesquisa'
   ClientHeight = 461
   ClientWidth = 764
-  Color = clSilver
+  Color = 9658417
+  TransparentColorValue = clWhite
   Ctl3D = False
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,8 +24,9 @@ object frmPesquisa: TfrmPesquisa
     Width = 764
     Height = 41
     Align = alBottom
-    Color = clSilver
-    TabOrder = 3
+    Color = 7621415
+    ParentBackground = False
+    TabOrder = 2
     DesignSize = (
       764
       41)
@@ -56,30 +58,44 @@ object frmPesquisa: TfrmPesquisa
   end
   object gbParametros: TGroupBox
     Left = 0
-    Top = 28
+    Top = 49
     Width = 764
-    Height = 58
+    Height = 57
+    Cursor = crHandPoint
     Align = alTop
+    BiDiMode = bdLeftToRight
     Caption = ' Par'#226'metros '
-    TabOrder = 1
+    DoubleBuffered = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpFixed
+    Font.Style = [fsBold]
+    ParentBiDiMode = False
+    ParentDoubleBuffered = False
+    ParentFont = False
+    TabOrder = 0
     object lbOpcao: TLabel
-      Left = 19
+      Left = 13
       Top = 24
-      Width = 32
-      Height = 13
+      Width = 38
+      Height = 14
       Alignment = taRightJustify
       Caption = 'Op'#231#227'o'
+      Color = clWhite
+      ParentColor = False
     end
     object lbIgualA: TLabel
-      Left = 170
+      Left = 186
       Top = 24
-      Width = 32
-      Height = 13
+      Width = 42
+      Height = 14
       Alignment = taRightJustify
       Caption = 'Igual a'
     end
     object edPesquisa: TEdit
-      Left = 210
+      Left = 238
       Top = 21
       Width = 233
       Height = 19
@@ -116,39 +132,17 @@ object frmPesquisa: TfrmPesquisa
       OnKeyDown = dbgClienteKeyDown
     end
   end
-  object pnlCabecalho: TPanel
-    Left = 0
-    Top = 0
-    Width = 764
-    Height = 28
-    Align = alTop
-    Color = clGray
-    TabOrder = 0
-    object lbCabecalho: TLabel
-      Left = 8
-      Top = 5
-      Width = 84
-      Height = 19
-      Caption = 'PESQUISA'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -16
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-  end
   object dbgCliente: TDBGrid
     Left = 0
-    Top = 86
+    Top = 106
     Width = 764
-    Height = 334
+    Height = 314
     Align = alClient
-    Color = clInfoBk
+    Color = clSilver
     FixedColor = clGradientInactiveCaption
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
     ReadOnly = True
-    TabOrder = 2
+    TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -156,5 +150,33 @@ object frmPesquisa: TfrmPesquisa
     TitleFont.Style = []
     OnDblClick = dbgClienteDblClick
     OnKeyDown = dbgClienteKeyDown
+  end
+  object lbCabecalho: TPanel
+    Left = 0
+    Top = 0
+    Width = 764
+    Height = 49
+    Align = alTop
+    BevelOuter = bvNone
+    Color = 7621415
+    ParentBackground = False
+    TabOrder = 3
+    DesignSize = (
+      764
+      49)
+    object LbNometela: TLabel
+      Left = 24
+      Top = 4
+      Width = 114
+      Height = 39
+      Anchors = [akLeft, akTop, akBottom]
+      Caption = 'Pesquisa'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -32
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+    end
   end
 end

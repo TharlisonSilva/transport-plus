@@ -13,7 +13,19 @@ uses
   UEntidade in 'Modelo\Persistencia\UEntidade.pas',
   URepositorio in 'Modelo\Persistencia\URepositorio.pas',
   URepositorioDB in 'Modelo\Persistencia\URepositorioDB.pas',
-  URegraCRUD in 'Modelo\Regra\URegraCRUD.pas';
+  URegraCRUD in 'Modelo\Regra\URegraCRUD.pas',
+  UCidade in 'Modelo\Persistencia\UCidade.pas',
+  UCliente in 'Modelo\Persistencia\UCliente.pas',
+  UEstado in 'Modelo\Persistencia\UEstado.pas',
+  UMotorista in 'Modelo\Persistencia\UMotorista.pas',
+  URepositorioCidade in 'Modelo\Persistencia\URepositorioCidade.pas',
+  URepositorioCliente in 'Modelo\Persistencia\URepositorioCliente.pas',
+  URepositorioMotorista in 'Modelo\Persistencia\URepositorioMotorista.pas',
+  URepositorioEstado in 'Modelo\Persistencia\URepositorioEstado.pas',
+  UFrmCadastroMotorista in 'VisaoControle\UFrmCadastroMotorista.pas' {FrmCadastroMotorista},
+  URegraCRUDMotorista in 'Modelo\Regra\URegraCRUDMotorista.pas',
+  UFrmInicio in 'VisaoControle\UFrmInicio.pas' {frmInicio},
+  UFrmNotaBlu in 'VisaoControle\UFrmNotaBlu.pas' {FrmNotaBlu};
 
 {$R *.res}
 
@@ -21,5 +33,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.CreateForm(TdmEntra21, dmEntra21);
+  Application.CreateForm(TfrmInicio, frmInicio);
   Application.Run;
 end.

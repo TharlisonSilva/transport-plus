@@ -8,7 +8,7 @@
 			<AppType>Application</AppType>
 			<FrameworkType>VCL</FrameworkType>
 			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
-			<ProjectVersion>12.2</ProjectVersion>
+			<ProjectVersion>12.3</ProjectVersion>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
 			<Base>true</Base>
@@ -79,6 +79,24 @@
 			<DCCReference Include="Modelo\Persistencia\URepositorio.pas"/>
 			<DCCReference Include="Modelo\Persistencia\URepositorioDB.pas"/>
 			<DCCReference Include="Modelo\Regra\URegraCRUD.pas"/>
+			<DCCReference Include="Modelo\Persistencia\UCidade.pas"/>
+			<DCCReference Include="Modelo\Persistencia\UCliente.pas"/>
+			<DCCReference Include="Modelo\Persistencia\UEstado.pas"/>
+			<DCCReference Include="Modelo\Persistencia\UMotorista.pas"/>
+			<DCCReference Include="Modelo\Persistencia\URepositorioCidade.pas"/>
+			<DCCReference Include="Modelo\Persistencia\URepositorioCliente.pas"/>
+			<DCCReference Include="Modelo\Persistencia\URepositorioMotorista.pas"/>
+			<DCCReference Include="Modelo\Persistencia\URepositorioEstado.pas"/>
+			<DCCReference Include="VisaoControle\UFrmCadastroMotorista.pas">
+				<Form>FrmCadastroMotorista</Form>
+			</DCCReference>
+			<DCCReference Include="Modelo\Regra\URegraCRUDMotorista.pas"/>
+			<DCCReference Include="VisaoControle\UFrmInicio.pas">
+				<Form>frmInicio</Form>
+			</DCCReference>
+			<DCCReference Include="VisaoControle\UFrmNotaBlu.pas">
+				<Form>FrmNotaBlu</Form>
+			</DCCReference>
 			<BuildConfiguration Include="Debug">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
@@ -92,7 +110,7 @@
 			</BuildConfiguration>
 		</ItemGroup>
 		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
-		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
 		<ProjectExtensions>
 			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
 			<Borland.ProjectType>VCLApplication</Borland.ProjectType>

@@ -16,13 +16,13 @@ type
     btnSair: TBitBtn;
     btnConfirmar: TBitBtn;
     gbParametros: TGroupBox;
-    pnlCabecalho: TPanel;
-    lbCabecalho: TLabel;
     dbgCliente: TDBGrid;
     edPesquisa: TEdit;
     lbOpcao: TLabel;
     lbIgualA: TLabel;
     cbOpcoes: TComboBox;
+    lbCabecalho: TPanel;
+    LbNometela: TLabel;
     procedure btnConfirmarClick(Sender: TObject);
     procedure dbgClienteDblClick(Sender: TObject);
     procedure btnSairClick(Sender: TObject);

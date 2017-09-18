@@ -25,8 +25,6 @@ type
   TRegraCRUDPonteiro = ^TRegraCRUD;
 
   TFrmCRUD = class(TForm)
-    pnlCabecalho: TPanel;
-    lbCabecalho: TLabel;
     gbLocalizar: TGroupBox;
     lbCodigo: TLabel;
     btnLocalizar: TButton;
@@ -38,6 +36,8 @@ type
     btnNovo: TBitBtn;
     pmOpcoes: TPopupMenu;
     edCodigo: TEdit;
+    lbCabecalho: TPanel;
+    LbNometela: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnSairClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
