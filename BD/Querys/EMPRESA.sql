@@ -5,5 +5,5 @@
 	BAIRRO 			varchar(60), 
 	INSC_ESTADUAL 	varchar(20),
 	
-	CONSTRAINT pk_empresa primary key(id),
+	CONSTRAINT pk_empresa primary key(id)
 );

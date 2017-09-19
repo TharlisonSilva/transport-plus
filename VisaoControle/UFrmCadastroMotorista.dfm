@@ -4,8 +4,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
   ClientHeight = 528
   ClientWidth = 998
   FormStyle = fsNormal
-  ExplicitLeft = -122
-  ExplicitTop = -112
+  ExplicitLeft = -198
   ExplicitWidth = 1004
   ExplicitHeight = 557
   PixelsPerInch = 96
@@ -126,7 +125,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
       ParentFont = False
     end
     object Label16: TLabel
-      Left = 726
+      Left = 731
       Top = 73
       Width = 46
       Height = 19
@@ -152,7 +151,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
       ParentFont = False
     end
     object Label19: TLabel
-      Left = 552
+      Left = 607
       Top = 135
       Width = 71
       Height = 19
@@ -165,7 +164,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 726
+      Left = 731
       Top = 12
       Width = 73
       Height = 19
@@ -217,7 +216,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
       ParentFont = False
     end
     object lbCidadeNascimento: TLabel
-      Left = 487
+      Left = 494
       Top = 73
       Width = 196
       Height = 19
@@ -277,7 +276,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
       TabOrder = 4
     end
     object edCep: TEdit
-      Left = 726
+      Left = 731
       Top = 98
       Width = 144
       Height = 30
@@ -385,7 +384,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
     object edTelefone: TMaskEdit
       Left = 555
       Top = 37
-      Width = 165
+      Width = 170
       Height = 30
       BevelInner = bvNone
       BorderStyle = bsNone
@@ -401,7 +400,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
       Text = '(  )    -    '
     end
     object edCelular: TMaskEdit
-      Left = 726
+      Left = 731
       Top = 37
       Width = 144
       Height = 30
@@ -419,9 +418,9 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
       Text = '(  )    -    '
     end
     object edCidadeNascimento: TEdit
-      Left = 448
+      Left = 446
       Top = 98
-      Width = 33
+      Width = 45
       Height = 30
       AutoSelect = False
       AutoSize = False
@@ -438,9 +437,9 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
       OnExit = edCidadeNascimentoExit
     end
     object btnLocalizarCidadeNascimento: TButton
-      Left = 689
+      Left = 693
       Top = 99
-      Width = 30
+      Width = 32
       Height = 30
       Cursor = crHandPoint
       Caption = '...'
@@ -455,7 +454,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
       OnClick = btnLocalizarCidadeNascimentoClick
     end
     object stNomeCidadeNascimento: TStaticText
-      Left = 487
+      Left = 494
       Top = 99
       Width = 196
       Height = 30
@@ -493,7 +492,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
       OnExit = edCidadeExit
     end
     object btnLocalizarCidade: TButton
-      Left = 833
+      Left = 845
       Top = 160
       Width = 30
       Height = 30
@@ -512,7 +511,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
     object stNomeCidade: TStaticText
       Left = 607
       Top = 160
-      Width = 220
+      Width = 236
       Height = 30
       AutoSize = False
       BorderStyle = sbsSingle

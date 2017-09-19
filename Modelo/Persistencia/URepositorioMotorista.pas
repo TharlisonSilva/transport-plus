@@ -47,8 +47,6 @@ begin
     coMOTORISTA.CEP                 := FieldByName(FLD_MOTORISTA_CEP).AsString;
     coMOTORISTA.CPF                 := FieldByName(FLD_MOTORISTA_CPF).AsString;
     coMOTORISTA.RG                  := FieldByName(FLD_MOTORISTA_RG).AsString;
-    coMOTORISTA.ORGAO_EXPEDIDOR     := FieldByName(FLD_MOTORISTA_ORGAO_EXPEDIDOR).AsString;
-    coMOTORISTA.DATA_EXPEDICAO      := FieldByName(FLD_MOTORISTA_DATA_EXPEDICAO).AsDateTime;
     coMOTORISTA.DATA_NASCIMENTO     := FieldByName(FLD_MOTORISTA_DATA_NASCIMENTO).AsDateTime;
     coMOTORISTA.CNH_NUMERO_REGISTRO := FieldByName(FLD_MOTORISTA_CNH_NUMERO_REGISTRO).AsString;
     coMOTORISTA.CNH_CATEGORIA       := FieldByName(FLD_MOTORISTA_CNH_CATEGORIA).AsString;
@@ -73,8 +71,6 @@ begin
     ParamByName(FLD_MOTORISTA_CEP).AsString                   := coMOTORISTA.CEP;
     ParamByName(FLD_MOTORISTA_CPF).AsString                   := coMOTORISTA.CPF;
     ParamByName(FLD_MOTORISTA_RG).AsString                    := coMOTORISTA.RG;
-    ParamByName(FLD_MOTORISTA_ORGAO_EXPEDIDOR).AsString       := coMOTORISTA.ORGAO_EXPEDIDOR;
-    ParamByName(FLD_MOTORISTA_DATA_EXPEDICAO).AsDate          := coMOTORISTA.DATA_EXPEDICAO;
     ParamByName(FLD_MOTORISTA_DATA_NASCIMENTO).AsDate         := coMOTORISTA.DATA_NASCIMENTO;
     ParamByName(FLD_MOTORISTA_CNH_NUMERO_REGISTRO).AsString   := coMOTORISTA.CNH_NUMERO_REGISTRO;
     ParamByName(FLD_MOTORISTA_CNH_CATEGORIA).AsString         := coMOTORISTA.CNH_CATEGORIA;

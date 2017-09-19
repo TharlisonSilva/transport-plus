@@ -9,5 +9,5 @@
 	
 	CONSTRAINT pk_cliente PRIMARY KEY(ID),
 	
-	CONSTRAINT fk_cliente_cidade FOREIGN KEY id_cidade REFERENCES CIDADE (ID));
+	CONSTRAINT fk_cliente_cidade FOREIGN KEY (id_cidade) REFERENCES CIDADE (ID));
 GO
