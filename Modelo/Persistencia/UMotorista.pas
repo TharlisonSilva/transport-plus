@@ -19,6 +19,8 @@ type
     CEP:                 String;
     CPF:                 String;
     RG:                  String;
+    ORGAO_EXPEDIDOR:     String;
+    DATA_EXPEDICAO:      TDate;
     DATA_NASCIMENTO:     TDate;
     CIDADE_NASCIMENTO:   TCIDADE;
     CNH_NUMERO_REGISTRO: String;
@@ -47,8 +49,6 @@ const
   FLD_MOTORISTA_CNH_NUMERO_REGISTRO   = 'CNH_NUMERO_REGISTRO';
   FLD_MOTORISTA_CNH_CATEGORIA         = 'CNH_CATEGORIA';
   FLD_MOTORISTA_CNH_DATA_VALIDADE     = 'CNH_DATA_VALIDADE';
-
-//  VW__MOTORISTA = 'MOTORISTA';
 
 resourcestring
   STR_MOTORISTA = 'Motorista';

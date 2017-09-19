@@ -51,6 +51,15 @@ begin
   inherited;
   with coSQLQuery do
   begin
+    FieldByName(FLD_VEICULO_MARCA).AsString         :=  coVEICULO.MARCA;
+    FieldByName(FLD_VEICULO_MODELO).AsString        := coVEICULO.MODELO;
+    FieldByName(FLD_VEICULO_ANO).AsInteger          := coVEICULO.ANO;
+    FieldByName(FLD_VEICULO_COR).AsString           := coVEICULO.COR;
+    FieldByName(FLD_VEICULO_PLACA).AsString         := coVEICULO.PLACA;
+    FieldByName(FLD_VEICULO_RNTRC).AsString         := coVEICULO.RNTRC;
+    FieldByName(FLD_VEICULO_RENAVAN).AsInteger      := coVEICULO.RENAVAN;
+    FieldByName(FLD_VEICULO_CAPACIDADE_KG).AsFloat  := coVEICULO.CAPACIDADE_KG;
+    FieldByName(FLD_VEICULO_KM_ATUAL).AsFloat       := coVEICULO.KM_ATUAL ;
 
   end;
 end;

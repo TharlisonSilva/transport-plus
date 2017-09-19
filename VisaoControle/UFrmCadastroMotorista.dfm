@@ -4,13 +4,14 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
   ClientHeight = 528
   ClientWidth = 998
   FormStyle = fsNormal
+  ExplicitLeft = -122
+  ExplicitTop = -112
   ExplicitWidth = 1004
   ExplicitHeight = 557
   PixelsPerInch = 96
   TextHeight = 13
   inherited gbLocalizar: TGroupBox
     Width = 998
-    ExplicitTop = 49
     ExplicitWidth = 998
     inherited btnLocalizar: TButton
       Left = 198
@@ -464,7 +465,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
       Color = clSkyBlue
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clGray
-      Font.Height = -19
+      Font.Height = -17
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentColor = False
@@ -519,7 +520,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
       Color = clSkyBlue
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clGray
-      Font.Height = -19
+      Font.Height = -17
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentColor = False
@@ -546,7 +547,7 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
     Time = 42984.864001400460000000
     TabOrder = 4
   end
-  inherited lbCabecalho: TPanel
+  inherited pnlCabecalho: TPanel
     Width = 998
     ExplicitWidth = 998
   end

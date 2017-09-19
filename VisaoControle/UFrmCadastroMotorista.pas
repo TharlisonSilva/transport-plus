@@ -51,6 +51,7 @@ type
     procedure btnLocalizarCidadeNascimentoClick(Sender: TObject);
     procedure btnLocalizarCidadeClick(Sender: TObject);
     procedure edCidadeExit(Sender: TObject);
+    procedure btnSairClick(Sender: TObject);
   private
     FRegraCRUDMotorista: TRegraCRUDMotorista;
     FRepositorioCidade: TRepositorioCidade;
@@ -110,6 +111,11 @@ begin
 
   if Trim(edCidadeNascimento.Text) <> EmptyStr then
     edCidadeNascimento.OnExit(btnLocalizarCidadeNascimento);
+end;
+
+procedure TFrmCadastroMotorista.btnSairClick(Sender: TObject);
+begin
+Self.Owner.Free;
 end;
 
 procedure TFrmCadastroMotorista.edCidadeExit(Sender: TObject);

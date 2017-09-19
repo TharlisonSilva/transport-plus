@@ -4,7 +4,7 @@ object dmEntra21: TdmEntra21
   Height = 97
   Width = 183
   object SQLConnection: TSQLConnection
-    ConnectionName = 'FBConnection'
+    ConnectionName = 'IBConnection'
     DriverName = 'Firebird'
     GetDriverFunc = 'getSQLDriverINTERBASE'
     KeepConnection = False
@@ -27,26 +27,28 @@ object dmEntra21: TdmEntra21
         'actory,Borland.Data.DbxFirebirdDriver,Version=15.0.0.0,Culture=n' +
         'eutral,PublicKeyToken=91d62ebb5b0d1b1b'
       'GetDriverFunc=getSQLDriverINTERBASE'
-      'LibraryName=dbxfb.dll'
-      'VendorLib=fbclient.DLL'
-      'Role=RoleName'
-      'MaxBlobSize=-1'
-      'TrimChar=False'
-      'DriverName=Firebird'
-      'Database=localhost:T:\transport-plus\BD\TRANSPORTPLUS.FDB'
+      'LibraryName=dbx4fb.dll'
+      'VendorLib=fdbclient.dll'
+      
+        'Database=localhost:F:\Projeto\transport-plus\BD\TRANSPORTPLUS.FD' +
+        'B'
       'User_Name=sysdba'
       'Password=masterkey'
-      'ServerCharSet='
-      'SQLDialect=3'
-      'ErrorResourceFile='
+      'Role=RoleName'
+      'MaxBlobSize=-1'
       'LocaleCode=0000'
-      'BlobSize=-1'
+      'IsolationLevel=ReadCommitted'
+      'SQLDialect=3'
       'CommitRetain=False'
       'WaitOnLocks=True'
-      'IsolationLevel=ReadCommitted'
+      'TrimChar=False'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'RoleName=RoleName'
       'ServerCharSet=UTF8'
       'Trim Char=False')
     VendorLib = 'fbclient.dll'
+    Connected = True
     Left = 32
     Top = 24
   end
