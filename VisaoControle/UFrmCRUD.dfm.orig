@@ -3,9 +3,15 @@ object FrmCRUD: TFrmCRUD
   Top = 0
   BorderStyle = bsSingle
   Caption = 'Cadastro de'
+<<<<<<< HEAD
   ClientHeight = 389
   ClientWidth = 647
   Color = 9658417
+=======
+  ClientHeight = 379
+  ClientWidth = 637
+  Color = 14540253
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -22,6 +28,7 @@ object FrmCRUD: TFrmCRUD
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
+<<<<<<< HEAD
   object gbLocalizar: TGroupBox
     Left = 0
     Top = 49
@@ -30,6 +37,46 @@ object FrmCRUD: TFrmCRUD
     Align = alTop
     Caption = ' Localizar '
     Color = 9658417
+=======
+  object pnlCabecalho: TPanel
+    Left = 0
+    Top = 0
+    Width = 637
+    Height = 28
+    Align = alTop
+    Color = clGray
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+    ExplicitWidth = 635
+    object lbCabecalho: TLabel
+      Left = 8
+      Top = 5
+      Width = 119
+      Height = 19
+      Caption = 'CADASTRO DE'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object gbLocalizar: TGroupBox
+    Left = 0
+    Top = 28
+    Width = 637
+    Height = 58
+    Align = alTop
+    Caption = ' Localizar '
+    Color = 14540253
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
     Ctl3D = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
@@ -40,7 +87,14 @@ object FrmCRUD: TFrmCRUD
     ParentColor = False
     ParentCtl3D = False
     ParentFont = False
+<<<<<<< HEAD
     TabOrder = 0
+    ExplicitTop = 87
+    ExplicitWidth = 637
+=======
+    TabOrder = 1
+    ExplicitWidth = 635
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
     object lbCodigo: TLabel
       Left = 17
       Top = 24
@@ -91,9 +145,15 @@ object FrmCRUD: TFrmCRUD
   end
   object pnlBotoes: TPanel
     Left = 0
+<<<<<<< HEAD
     Top = 332
     Width = 647
     Height = 57
+=======
+    Top = 338
+    Width = 637
+    Height = 41
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
     Align = alBottom
     BevelOuter = bvNone
     Color = 7621415
@@ -104,13 +164,26 @@ object FrmCRUD: TFrmCRUD
     Font.Style = []
     ParentBackground = False
     ParentFont = False
+<<<<<<< HEAD
     TabOrder = 1
+    ExplicitLeft = 24
+    ExplicitTop = 348
     DesignSize = (
       647
       57)
     object btnLimpar: TBitBtn
       Left = 412
       Top = 14
+=======
+    TabOrder = 2
+    ExplicitWidth = 635
+    DesignSize = (
+      637
+      41)
+    object btnLimpar: TBitBtn
+      Left = 402
+      Top = 4
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
       Width = 115
       Height = 35
       Cursor = crHandPoint
@@ -140,10 +213,16 @@ object FrmCRUD: TFrmCRUD
       ParentFont = False
       TabOrder = 3
       OnClick = btnLimparClick
+      ExplicitLeft = 400
     end
     object btnExcluir: TBitBtn
-      Left = 283
+<<<<<<< HEAD
+      Left = 295
       Top = 14
+=======
+      Left = 285
+      Top = 4
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
       Width = 115
       Height = 35
       Cursor = crHandPoint
@@ -173,10 +252,16 @@ object FrmCRUD: TFrmCRUD
       ParentFont = False
       TabOrder = 2
       OnClick = btnExcluirClick
+      ExplicitLeft = 283
     end
     object btnGravar: TBitBtn
+<<<<<<< HEAD
       Left = 178
       Top = 14
+=======
+      Left = 168
+      Top = 4
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
       Width = 115
       Height = 35
       Cursor = crHandPoint
@@ -206,10 +291,16 @@ object FrmCRUD: TFrmCRUD
       ParentFont = False
       TabOrder = 1
       OnClick = btnGravarClick
+      ExplicitLeft = 166
     end
     object btnSair: TBitBtn
+<<<<<<< HEAD
       Left = 529
       Top = 14
+=======
+      Left = 519
+      Top = 4
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
       Width = 115
       Height = 35
       Cursor = crHandPoint
@@ -239,6 +330,7 @@ object FrmCRUD: TFrmCRUD
       ParentFont = False
       TabOrder = 4
       OnClick = btnSairClick
+      ExplicitLeft = 517
     end
     object btnNovo: TBitBtn
       Left = 4
@@ -274,7 +366,7 @@ object FrmCRUD: TFrmCRUD
       OnClick = btnNovoClick
     end
   end
-  object pnlCabecalho: TPanel
+  object lbCabecalho: TPanel
     Left = 0
     Top = 0
     Width = 647
@@ -284,10 +376,12 @@ object FrmCRUD: TFrmCRUD
     Color = 7621415
     ParentBackground = False
     TabOrder = 2
+    ExplicitLeft = -300
+    ExplicitWidth = 947
     DesignSize = (
       647
       49)
-    object lbCabecalho: TLabel
+    object LbNometela: TLabel
       Left = 24
       Top = 4
       Width = 62

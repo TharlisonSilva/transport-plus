@@ -36,8 +36,8 @@ type
     btnNovo: TBitBtn;
     pmOpcoes: TPopupMenu;
     edCodigo: TEdit;
-    lbCabecalho: TPanel;
-    LbNometela: TLabel;
+    pnlCabecalho: TPanel;
+    lbCabecalho: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnSairClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);

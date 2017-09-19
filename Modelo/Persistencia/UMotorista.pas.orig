@@ -10,6 +10,24 @@ uses
 type
   TMOTORISTA = class(TENTIDADE)
   public
+<<<<<<< HEAD
+    NOME: String;
+    TELEFONE: String;
+    CELULAR: String;
+    ENDERECO: String;
+    BAIRRO: String;
+    CIDADE: TCIDADE;
+    CEP: Integer;
+    CPF: String;
+    RG: String;
+    ORGAO_EXPEDIDOR: String;
+    DATA_EXPEDICAO: TDate;
+    DATA_NASCIMENTO: TDate;
+    CIDADE_NASCIMENTO: TCIDADE;
+    CNH_NUMERO_REGISTRO: String;
+    CNH_CATEGORIA: String;
+    CNH_DATA_VALIDADE: TDate;
+=======
     NOME:                String;
     TELEFONE:            String;
     CELULAR:             String;
@@ -19,11 +37,14 @@ type
     CEP:                 String;
     CPF:                 String;
     RG:                  String;
+    ORGAO_EXPEDIDOR:     String;
+    DATA_EXPEDICAO:      TDate;
     DATA_NASCIMENTO:     TDate;
     CIDADE_NASCIMENTO:   TCIDADE;
     CNH_NUMERO_REGISTRO: String;
     CNH_CATEGORIA:       String;
     CNH_DATA_VALIDADE:   TDate;
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
 
     constructor Create; override;
     destructor Destroy; override;
@@ -48,8 +69,11 @@ const
   FLD_MOTORISTA_CNH_CATEGORIA         = 'CNH_CATEGORIA';
   FLD_MOTORISTA_CNH_DATA_VALIDADE     = 'CNH_DATA_VALIDADE';
 
+<<<<<<< HEAD
 //  VW__MOTORISTA = 'MOTORISTA';
 
+=======
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
 resourcestring
   STR_MOTORISTA = 'Motorista';
 

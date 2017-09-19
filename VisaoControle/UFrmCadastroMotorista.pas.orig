@@ -26,6 +26,11 @@ type
     Label2: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+<<<<<<< HEAD
+=======
+    Label6: TLabel;
+    Label7: TLabel;
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
     Label8: TLabel;
     lbCidadeNascimento: TLabel;
     Label3: TLabel;
@@ -34,10 +39,18 @@ type
     edCep: TEdit;
     edEndereco: TEdit;
     edNome: TEdit;
+<<<<<<< HEAD
+=======
+    edOrgaoExpedidor: TEdit;
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
     edRegistroCnh: TEdit;
     edRG: TEdit;
     edCpf: TMaskEdit;
     edDataValidade: TDateTimePicker;
+<<<<<<< HEAD
+=======
+    edDataEmissao: TDateTimePicker;
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
     edDataNascimento: TDateTimePicker;
     edTelefone: TMaskEdit;
     edCelular: TMaskEdit;
@@ -117,7 +130,10 @@ var
   loCIDADE: TCIDADE;
 begin
   FMOTORISTA.CIDADE.ID := 0;
+<<<<<<< HEAD
+=======
   stNomeCidade.Caption := EmptyStr;
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
   if StrToIntDef(edCidade.Text, 0) <> 0 then
     try
       loCIDADE := TCIDADE(FRepositorioCidade.Retorna(StrToIntDef(edCidade.Text, 0)));
@@ -141,8 +157,12 @@ procedure TFrmCadastroMotorista.edCidadeNascimentoExit(Sender: TObject);
 var
   loCIDADE: TCIDADE;
 begin
+<<<<<<< HEAD
+  FMOTORISTA.CIDADE.ID := 0;
+=======
   FMOTORISTA.CIDADE_NASCIMENTO.ID := 0;
   stNomeCidadeNascimento.Caption  := EmptyStr;
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
   if StrToIntDef(edCidadeNascimento.Text, 0) <> 0 then
     try
       loCIDADE := TCIDADE(FRepositorioCidade.Retorna(StrToIntDef(edCidadeNascimento.Text, 0)));
@@ -150,8 +170,13 @@ begin
         raise EValidacaoNegocio.Create('Cidade informada não foi encontrada')
       else
         begin
+<<<<<<< HEAD
+          FMOTORISTA.CIDADE              := loCIDADE;
+          stNomeCidadeNascimento.Caption := FMOTORISTA.CIDADE.NOME;
+=======
           FMOTORISTA.CIDADE_NASCIMENTO   := loCIDADE;
           stNomeCidadeNascimento.Caption := FMOTORISTA.CIDADE_NASCIMENTO.NOME;
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
         end;
     except
       on E: Exception do
@@ -204,6 +229,11 @@ begin
 end;
 
 procedure TFrmCadastroMotorista.PreencheEntidade;
+<<<<<<< HEAD
+=======
+var
+  Aspa: String;
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
 begin
   inherited;
   FMOTORISTA.NOME                := edNome.Text;
@@ -211,13 +241,27 @@ begin
   FMOTORISTA.CELULAR             := edCelular.Text;
   FMOTORISTA.ENDERECO            := edEndereco.Text;
   FMOTORISTA.BAIRRO              := edBairro.Text;
+<<<<<<< HEAD
+  FMOTORISTA.CEP                 := StrToIntDef(edCep.Text, 0);
+  FMOTORISTA.CPF                 := edCpf.Text;
+  FMOTORISTA.RG                  := edRG.Text;
+  //FMOTORISTA.ORGAO_EXPEDIDOR     := edOrgaoExpedidor.Text;
+  //FMOTORISTA.DATA_EXPEDICAO      := edDataEmissao.DateTime;
+  FMOTORISTA.DATA_NASCIMENTO     := edDataNascimento.DateTime;
+  FMOTORISTA.CNH_NUMERO_REGISTRO := edRegistroCnh.Text;
+  FMOTORISTA.CNH_CATEGORIA       := edCategoria.Text;
+  FMOTORISTA.CNH_DATA_VALIDADE   := edDataValidade.DateTime;
+=======
   FMOTORISTA.CEP                 := edCep.Text;
   FMOTORISTA.CPF                 := edCpf.Text;
   FMOTORISTA.RG                  := edRG.Text;
+  FMOTORISTA.ORGAO_EXPEDIDOR     := edOrgaoExpedidor.Text;
+  FMOTORISTA.DATA_EXPEDICAO      := edDataEmissao.Date;
   FMOTORISTA.DATA_NASCIMENTO     := edDataNascimento.Date;
   FMOTORISTA.CNH_NUMERO_REGISTRO := edRegistroCnh.Text;
   FMOTORISTA.CNH_CATEGORIA       := edCategoria.Text;
   FMOTORISTA.CNH_DATA_VALIDADE   := edDataValidade.Date;
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
 end;
 
 procedure TFrmCadastroMotorista.PreencheFormulario;
@@ -228,9 +272,19 @@ begin
   edCelular.Text            := FMOTORISTA.CELULAR;
   edEndereco.Text           := FMOTORISTA.ENDERECO;
   edBairro.Text             := FMOTORISTA.BAIRRO;
+<<<<<<< HEAD
+  edCep.Text                := IntToStr(FMOTORISTA.CEP);
+  edCpf.Text                := FMOTORISTA.CPF;
+  edRG.Text                 := FMOTORISTA.RG;
+ // edOrgaoExpedidor.Text     := FMOTORISTA.ORGAO_EXPEDIDOR;
+ // edDataEmissao.DateTime    := FMOTORISTA.DATA_EXPEDICAO;
+=======
   edCep.Text                := FMOTORISTA.CEP;
   edCpf.Text                := FMOTORISTA.CPF;
   edRG.Text                 := FMOTORISTA.RG;
+  edOrgaoExpedidor.Text     := FMOTORISTA.ORGAO_EXPEDIDOR;
+  edDataEmissao.DateTime    := FMOTORISTA.DATA_EXPEDICAO;
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
   edDataNascimento.DateTime := FMOTORISTA.DATA_NASCIMENTO;
   edRegistroCnh.Text        := FMOTORISTA.CNH_NUMERO_REGISTRO;
   edCategoria.Text          := FMOTORISTA.CNH_CATEGORIA;

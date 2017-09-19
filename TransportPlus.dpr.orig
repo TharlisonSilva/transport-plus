@@ -24,15 +24,24 @@ uses
   URepositorioEstado in 'Modelo\Persistencia\URepositorioEstado.pas',
   UFrmCadastroMotorista in 'VisaoControle\UFrmCadastroMotorista.pas' {FrmCadastroMotorista},
   URegraCRUDMotorista in 'Modelo\Regra\URegraCRUDMotorista.pas',
+<<<<<<< HEAD
+  UFrmInicio in 'VisaoControle\UFrmInicio.pas' {frmInicio},
+  UFrmNotaBlu in 'VisaoControle\UFrmNotaBlu.pas' {FrmNotaBlu};
+=======
   UVeiculo in 'Modelo\Persistencia\UVeiculo.pas',
   URepositorioVeiculo in 'Modelo\Persistencia\URepositorioVeiculo.pas',
   URegraCRUDVeiculo in 'Modelo\Regra\URegraCRUDVeiculo.pas';
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.CreateForm(TdmEntra21, dmEntra21);
+<<<<<<< HEAD
+  Application.CreateForm(TfrmInicio, frmInicio);
+=======
   Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
   Application.Run;
 end.

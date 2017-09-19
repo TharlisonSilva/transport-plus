@@ -27,13 +27,25 @@ object dmEntra21: TdmEntra21
         'actory,Borland.Data.DbxFirebirdDriver,Version=15.0.0.0,Culture=n' +
         'eutral,PublicKeyToken=91d62ebb5b0d1b1b'
       'GetDriverFunc=getSQLDriverINTERBASE'
+<<<<<<< HEAD
       'LibraryName=dbxfb.dll'
       'VendorLib=fbclient.DLL'
+=======
+      'LibraryName=dbx4fb.dll'
+      'VendorLib=fdbclient.dll'
+      
+        'Database=localhost:D:\Projeto\transport-plus\BD\TRANSPORTPLUS.FD' +
+        'B'
+      'User_Name=sysdba'
+      'Password=masterkey'
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
       'Role=RoleName'
       'MaxBlobSize=-1'
       'TrimChar=False'
       'DriverName=Firebird'
-      'Database=localhost:T:\transport-plus\BD\TRANSPORTPLUS.FDB'
+      'Database=localhost:D:\transport-plus\DB\TRANSPORTPLUS.FDB'
+      'RoleName=RoleName'
+<<<<<<< HEAD
       'User_Name=sysdba'
       'Password=masterkey'
       'ServerCharSet='
@@ -44,9 +56,12 @@ object dmEntra21: TdmEntra21
       'CommitRetain=False'
       'WaitOnLocks=True'
       'IsolationLevel=ReadCommitted'
+=======
       'ServerCharSet=UTF8'
+>>>>>>> 604307bda415f461843f551fac80957832d23e92
       'Trim Char=False')
     VendorLib = 'fbclient.dll'
+    Connected = True
     Left = 32
     Top = 24
   end
