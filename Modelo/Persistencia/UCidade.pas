@@ -4,7 +4,7 @@ interface
 
 uses
     UEntidade
-  , UESTADO
+  , UEstado
   ;
 
 type

@@ -40,6 +40,7 @@ type
     PnRelatorios: TPanel;
     LbRelatorios: TLabel;
     ImRelatorios: TImage;
+    Veiculo1: TMenuItem;
     procedure miSairClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure miMotoristaClick(Sender: TObject);
@@ -48,6 +49,7 @@ type
     procedure ImNotabluClick(Sender: TObject);
     procedure PnNotabluClick(Sender: TObject);
     procedure LbNotabluClick(Sender: TObject);
+    procedure Veiculo1Click(Sender: TObject);
   private
     { Private declaration }
   public
@@ -63,12 +65,14 @@ uses
     UDM
   , UFrmCadastroMotorista
   , UFrmInicio
+  , UFrmCadastroVeiculo
   ;
 
 
 const
   CNT_CLASSE_TIPO_FORMULARIO: Array[TTipoFormulario] of TFormClass =
-    (TFrmCadastroMotorista);
+    (TFrmCadastroMotorista
+    ,TFrmCadastroVeiculo);
 
 {$R *.dfm}
 
@@ -85,6 +89,11 @@ end;
 procedure TFrmPrincipal.PnNotabluClick(Sender: TObject);
 begin
   Application.CreateForm(TFrmNotaBlu, FrmNotaBlu);
+end;
+
+procedure TFrmPrincipal.Veiculo1Click(Sender: TObject);
+begin
+  VerificaTabSheet((Sender as TMenuItem).Tag);
 end;
 
 procedure TFrmPrincipal.VerificaTabSheet(const Tag: Integer);

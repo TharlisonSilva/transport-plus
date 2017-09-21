@@ -18,7 +18,8 @@ type
                         , touAtualizacao
                         , touExclusao);
 
-  TTipoFormulario = (tfCadastroMotorista = 1);
+  TTipoFormulario = (tfCadastroMotorista = 1
+                    ,tfCadastroVeiculo);
 
   EValidacaoNegocio = class(Exception);
 

@@ -30,7 +30,7 @@ object dmEntra21: TdmEntra21
       'LibraryName=dbx4fb.dll'
       'VendorLib=fdbclient.dll'
       
-        'Database=localhost:F:\Projeto\transport-plus\BD\TRANSPORTPLUS.FD' +
+        'Database=localhost:D:\Projeto\transport-plus\BD\TRANSPORTPLUS.FD' +
         'B'
       'User_Name=sysdba'
       'Password=masterkey'

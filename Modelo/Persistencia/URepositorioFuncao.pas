@@ -39,7 +39,7 @@ begin
   with coSQLQuery do
   begin
 
-    FieldByName(FLD_FUNCAO_NOME).AsString := coFUNCAO.NOME;
+    ParamByName(FLD_FUNCAO_NOME).AsString := coFUNCAO.NOME;
 
   end;
 end;

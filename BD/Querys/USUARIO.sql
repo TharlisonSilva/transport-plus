@@ -7,8 +7,8 @@
 	
 	CONSTRAINT pk_usuario PRIMARY KEY(ID),
 	
-	CONSTRAINT uk_login UNIQUE KEY(login),
+	CONSTRAINT uk_login UNIQUE(login),
 	
-	CONSTRAINT fk_usuario_nivel FOREIGN KEY id_nivel REFERENCES NIVEL (ID)
+	CONSTRAINT fk_usuario_nivel FOREIGN KEY (id_nivel) REFERENCES NIVEL (ID)
 	
 )

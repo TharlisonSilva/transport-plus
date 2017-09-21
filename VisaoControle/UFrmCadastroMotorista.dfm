@@ -4,7 +4,8 @@ inherited FrmCadastroMotorista: TFrmCadastroMotorista
   ClientHeight = 528
   ClientWidth = 998
   FormStyle = fsNormal
-  ExplicitLeft = -198
+  ExplicitLeft = -289
+  ExplicitTop = -112
   ExplicitWidth = 1004
   ExplicitHeight = 557
   PixelsPerInch = 96

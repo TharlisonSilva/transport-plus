@@ -51,12 +51,12 @@ begin
   inherited;
   with coSQLQuery do
   begin
-    FieldByName(FLD_CLIENTE_NOME).AsString       := coCLIENTE.NOME;
-    FieldByName(FLD_CLIENTE_CPF_CNPJ).AsString   := coCLIENTE.CPF_CNPJ;
-    FieldByName(FLD_CLIENTE_ENDERECO).AsString   := coCLIENTE.ENDERECO;
-    FieldByName(FLD_CLIENTE_BAIRRO).AsString     := coCLIENTE.BAIRRO;
+    ParamByName(FLD_CLIENTE_NOME).AsString       := coCLIENTE.NOME;
+    ParamByName(FLD_CLIENTE_CPF_CNPJ).AsString   := coCLIENTE.CPF_CNPJ;
+    ParamByName(FLD_CLIENTE_ENDERECO).AsString   := coCLIENTE.ENDERECO;
+    ParamByName(FLD_CLIENTE_BAIRRO).AsString     := coCLIENTE.BAIRRO;
     ParamByName(FLD_CLIENTE_ID_CIDADE).AsInteger := coCLIENTE.ID_CIDADE.ID;
-    FieldByName(FLD_CLIENTE_CEP).AsString        := coCLIENTE.CEP;
+    ParamByName(FLD_CLIENTE_CEP).AsString        := coCLIENTE.CEP;
   end;
 end;
 

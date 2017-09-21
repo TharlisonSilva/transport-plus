@@ -12,13 +12,14 @@ type
 
    MARCA          :     String;
 	 MODELO         :     String;
-	 ANO            :     Integer;
+	 ANO            :     TDate;
 	 COR            :     String;
 	 PLACA          :     String;
 	 RNTRC          :     String;
 	 RENAVAN        :     Integer;
 	 CAPACIDADE_KG  :     Double;
 	 KM_ATUAL       :     Double;
+   DESCRICAO      :     String;
 
     constructor Create; override;
     destructor Destroy; override;
@@ -36,6 +37,7 @@ const
   FLD_VEICULO_RENAVAN        = 'RENAVAN';
   FLD_VEICULO_CAPACIDADE_KG  = 'CAPACIDADE_KG';
   FLD_VEICULO_KM_ATUAL       = 'KM_ATUAL';
+  FLD_VEICULO_DESCRICAO      = 'DESCRICAO';
 
 resourcestring
   STR_VEICULO = 'Veiculo';

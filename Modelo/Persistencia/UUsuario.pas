@@ -4,41 +4,30 @@ interface
 
 uses
     UEntidade
+  , Univel
   ;
 
 type
   TUSUARIO = class(TENTIDADE)
   public
-
-   NOME           :     String;
-	 LOGIN          :     String;
-	 PSW            :     Integer;
-	 NIVEL          :     TNIVEL;
-	 PLACA          :     String;
-	 RNTRC          :     String;
-	 RENAVAN        :     Integer;
-	 CAPACIDADE_KG  :     Double;
-	 KM_ATUAL       :     Double;
+    NOME     :String;
+    LOGIN    :String;
+    SENHA    :String;
+    ID_NIVEL :TNIVEL;
 
     constructor Create; override;
     destructor Destroy; override;
   end;
 
 const
-
-  TBL_VEICULO                = 'VEICULO';
-  FLD_VEICULO_MARCA          = 'MARCA';
-  FLD_VEICULO_MODELO         = 'MODELO';
-  FLD_VEICULO_ANO            = 'ANO';
-  FLD_VEICULO_COR            = 'COR';
-  FLD_VEICULO_PLACA          = 'PLACA';
-  FLD_VEICULO_RNTRC          = 'RNTRC';
-  FLD_VEICULO_RENAVAN        = 'RENAVAN';
-  FLD_VEICULO_CAPACIDADE_KG  = 'CAPACIDADE_KG';
-  FLD_VEICULO_KM_ATUAL       = 'KM_ATUAL';
+  TBL_USUARIO           = 'USUARIO';
+  FLD_USUARIO_NOME      = 'NOME';
+  FLD_USUARIO_LOGIN     = 'LOGIN';
+  FLD_USUARIO_SENHA     = 'SENHA';
+  FLD_USUARIO_ID_NIVEL  = 'ID_NIVEL';
 
 resourcestring
-  STR_VEICULO = 'Veiculo';
+  STR_USUARIO = 'USUARIO';
 
 implementation
 
@@ -46,19 +35,19 @@ uses
     SysUtils
   ;
 
-{ TMOTORISTA }
+{ TCIDADE }
 
-{ TVEICULO }
-
-constructor TVEICULO.Create;
+constructor TUSUARIO.Create;
 begin
-  inherited;
-
+  ID_NIVEL := TNIVEL.Create;
 end;
 
-destructor TVEICULO.Destroy;
+destructor TUSUARIO.Destroy;
 begin
+  if Assigned(ID_NIVEL) then
+    FreeAndNil(ID_NIVEL);
 
   inherited;
 end;
+
 end.

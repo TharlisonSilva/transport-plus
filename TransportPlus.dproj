@@ -94,6 +94,26 @@
 			<DCCReference Include="Modelo\Persistencia\UVeiculo.pas"/>
 			<DCCReference Include="Modelo\Persistencia\URepositorioVeiculo.pas"/>
 			<DCCReference Include="Modelo\Regra\URegraCRUDVeiculo.pas"/>
+			<DCCReference Include="Modelo\Regra\URegraCRUDCliente.pas"/>
+			<DCCReference Include="Modelo\Persistencia\UEmpresa.pas"/>
+			<DCCReference Include="Modelo\Persistencia\URepositorioEmpresa.pas"/>
+			<DCCReference Include="Modelo\Regra\URegraCRUDEmpresa.pas"/>
+			<DCCReference Include="Modelo\Persistencia\UFuncao.pas"/>
+			<DCCReference Include="Modelo\Persistencia\URepositorioFuncao.pas"/>
+			<DCCReference Include="Modelo\Persistencia\UNivel.pas"/>
+			<DCCReference Include="Modelo\Persistencia\URepositorioNivel.pas"/>
+			<DCCReference Include="Modelo\Persistencia\UUsuario.pas"/>
+			<DCCReference Include="Modelo\Persistencia\URepositorioUsuario.pas"/>
+			<DCCReference Include="Modelo\Regra\URegraCRUDUsuario.pas"/>
+			<DCCReference Include="Modelo\Persistencia\UOs.pas"/>
+			<DCCReference Include="Modelo\Persistencia\URepositorioOs.pas"/>
+			<DCCReference Include="Modelo\Regra\URegraCRUDOs.pas"/>
+			<DCCReference Include="VisaoControle\UFrmCadastroVeiculo.pas">
+				<Form>FrmCadastroVeiculo</Form>
+			</DCCReference>
+			<DCCReference Include="VisaoControle\UFrmCadastroCliente.pas">
+				<Form>FrmCadastroCliente</Form>
+			</DCCReference>
 			<BuildConfiguration Include="Debug">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
@@ -107,7 +127,7 @@
 			</BuildConfiguration>
 		</ItemGroup>
 		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
-		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj"/>
 		<ProjectExtensions>
 			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
 			<Borland.ProjectType>VCLApplication</Borland.ProjectType>

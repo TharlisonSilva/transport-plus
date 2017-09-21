@@ -34,8 +34,6 @@ object FrmPrincipal: TFrmPrincipal
       item
         Width = 50
       end>
-    ExplicitTop = 543
-    ExplicitWidth = 1012
   end
   object PnTopo: TPanel
     Left = 0
@@ -47,7 +45,6 @@ object FrmPrincipal: TFrmPrincipal
     Color = 8404992
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 1012
     DesignSize = (
       1022
       65)
@@ -77,12 +74,8 @@ object FrmPrincipal: TFrmPrincipal
     ActivePage = INICIO
     Align = alClient
     TabOrder = 2
-    ExplicitWidth = 1012
-    ExplicitHeight = 478
     object INICIO: TTabSheet
       Caption = 'INICIO'
-      ExplicitWidth = 1004
-      ExplicitHeight = 450
       object PnClientes: TPanel
         Left = 12
         Top = 14
@@ -576,6 +569,11 @@ object FrmPrincipal: TFrmPrincipal
         Tag = 1
         Caption = 'Motorista'
         OnClick = miMotoristaClick
+      end
+      object Veiculo1: TMenuItem
+        Tag = 2
+        Caption = 'Veiculo'
+        OnClick = Veiculo1Click
       end
     end
     object miSair: TMenuItem

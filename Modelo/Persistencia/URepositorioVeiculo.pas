@@ -35,13 +35,14 @@ begin
   begin
     coVEICULO.MARCA             := FieldByName(FLD_VEICULO_MARCA).AsString;
     coVEICULO.MODELO            := FieldByName(FLD_VEICULO_MODELO).AsString;
-    coVEICULO.ANO               := FieldByName(FLD_VEICULO_ANO).AsInteger;
+    coVEICULO.ANO               := FieldByName(FLD_VEICULO_ANO).AsDateTime;
     coVEICULO.COR               := FieldByName(FLD_VEICULO_COR).AsString;
     coVEICULO.PLACA             := FieldByName(FLD_VEICULO_PLACA).AsString;
     coVEICULO.RNTRC             := FieldByName(FLD_VEICULO_RNTRC).AsString;
     coVEICULO.RENAVAN           := FieldByName(FLD_VEICULO_RENAVAN).AsInteger;
     coVEICULO.CAPACIDADE_KG     := FieldByName(FLD_VEICULO_CAPACIDADE_KG).AsFloat;
     coVEICULO.KM_ATUAL          := FieldByName(FLD_VEICULO_KM_ATUAL).AsFloat;
+    coVEICULO.DESCRICAO         := FieldByName(FLD_VEICULO_DESCRICAO).AsString;
   end;
 end;
 
@@ -51,15 +52,16 @@ begin
   inherited;
   with coSQLQuery do
   begin
-    FieldByName(FLD_VEICULO_MARCA).AsString         :=  coVEICULO.MARCA;
-    FieldByName(FLD_VEICULO_MODELO).AsString        := coVEICULO.MODELO;
-    FieldByName(FLD_VEICULO_ANO).AsInteger          := coVEICULO.ANO;
-    FieldByName(FLD_VEICULO_COR).AsString           := coVEICULO.COR;
-    FieldByName(FLD_VEICULO_PLACA).AsString         := coVEICULO.PLACA;
-    FieldByName(FLD_VEICULO_RNTRC).AsString         := coVEICULO.RNTRC;
-    FieldByName(FLD_VEICULO_RENAVAN).AsInteger      := coVEICULO.RENAVAN;
-    FieldByName(FLD_VEICULO_CAPACIDADE_KG).AsFloat  := coVEICULO.CAPACIDADE_KG;
-    FieldByName(FLD_VEICULO_KM_ATUAL).AsFloat       := coVEICULO.KM_ATUAL ;
+    ParamByName(FLD_VEICULO_MARCA).AsString         :=  coVEICULO.MARCA;
+    ParamByName(FLD_VEICULO_MODELO).AsString        := coVEICULO.MODELO;
+    ParamByName(FLD_VEICULO_ANO).AsDateTime             := coVEICULO.ANO;
+    ParamByName(FLD_VEICULO_COR).AsString           := coVEICULO.COR;
+    ParamByName(FLD_VEICULO_PLACA).AsString         := coVEICULO.PLACA;
+    ParamByName(FLD_VEICULO_RNTRC).AsString         := coVEICULO.RNTRC;
+    ParamByName(FLD_VEICULO_RENAVAN).AsInteger      := coVEICULO.RENAVAN;
+    ParamByName(FLD_VEICULO_CAPACIDADE_KG).AsFloat  := coVEICULO.CAPACIDADE_KG;
+    ParamByName(FLD_VEICULO_KM_ATUAL).AsFloat       := coVEICULO.KM_ATUAL ;
+    ParamByName(FLD_VEICULO_DESCRICAO).AsString     := coVEICULO.DESCRICAO ;
 
   end;
 end;
