@@ -10,6 +10,7 @@ uses
   , ComCtrls
   , Mask
   , UMensagens
+  , UPapel
   ;
 
 type
@@ -19,7 +20,13 @@ type
                         , touExclusao);
 
   TTipoFormulario = (tfCadastroMotorista = 1
-                    ,tfCadastroVeiculo);
+                    ,tfCadastroVeiculo
+                    ,tfCadastroCliente
+                    ,tfCadastroUsuario
+                    ,tfCadastroEmpresa
+                    ,tfCadastroOs
+                    ,tfCadastroNotaBlu
+                    ,tfConsultaTransporte);
 
   EValidacaoNegocio = class(Exception);
 
@@ -28,6 +35,23 @@ type
     class function LimpaFormulario(const coParent: TWinControl): Boolean;
     class function ComponenteValido(const coCompClass: TClass): Boolean;
   end;
+
+
+  TPapelUsuario   = (tpluOperacional,
+                     tpluAdministrador);
+
+  TListaPapeisUsuario = set of TPapelUsuario;
+
+  TPermissaoUsuario = (tpruCadastraMotorista = 1,
+                        tpruCadastraVeiculo,
+                        tpruCadastraCliente,
+                        tpruCadastraUsuario,
+                        tpruCadastrarOS,
+                        tpruTransporte,
+                        tpruEmpresa,
+                        tpruInfo);
+
+  TListaPermissoesUsuario = set of TPermissaoUsuario;
 
 const
   CNT_TIPO_OPERACAO_USUARIO:

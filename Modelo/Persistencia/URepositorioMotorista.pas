@@ -52,8 +52,7 @@ begin
     coMOTORISTA.CNH_CATEGORIA       := FieldByName(FLD_MOTORISTA_CNH_CATEGORIA).AsString;
     coMOTORISTA.CNH_DATA_VALIDADE   := FieldByName(FLD_MOTORISTA_CNH_DATA_VALIDADE).AsDateTime;
 
-    coMOTORISTA.CIDADE              := TCIDADE(FRepositorioCidade.Retorna(FieldByName(FLD_MOTORISTA_ID_CIDADE).AsInteger));
-    coMOTORISTA.CIDADE_NASCIMENTO   := TCIDADE(FRepositorioCidade.Retorna(FieldByName(FLD_MOTORISTA_ID_CIDADE_NASCIMENTO).AsInteger));;
+    coMOTORISTA.CIDADE              := TCIDADE(FRepositorioCidade.Retorna(FieldByName(FLD_MOTORISTA_CIDADE).AsInteger));
   end;
 end;
 
@@ -76,9 +75,7 @@ begin
     ParamByName(FLD_MOTORISTA_CNH_CATEGORIA).AsString         := coMOTORISTA.CNH_CATEGORIA;
     ParamByName(FLD_MOTORISTA_CNH_DATA_VALIDADE).AsDate       := coMOTORISTA.CNH_DATA_VALIDADE;
 
-    ParamByName(FLD_MOTORISTA_ID_CIDADE).AsInteger            := coMOTORISTA.CIDADE.ID;;
-    ParamByName(FLD_MOTORISTA_ID_CIDADE_NASCIMENTO).AsInteger := coMOTORISTA.CIDADE_NASCIMENTO.ID;
-
+    ParamByName(FLD_MOTORISTA_CIDADE).AsInteger               := coMOTORISTA.CIDADE.ID;
 
   end;
 end;

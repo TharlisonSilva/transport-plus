@@ -9,7 +9,7 @@ uses
   , UMotorista
   , ComCtrls
   , UUtilitarios
-  , URepositorioCidade
+  , URepositorioCidade, pngimage
   ;
 
 type
@@ -26,8 +26,6 @@ type
     Label2: TLabel;
     Label4: TLabel;
     Label5: TLabel;
-    Label8: TLabel;
-    lbCidadeNascimento: TLabel;
     Label3: TLabel;
     edBairro: TEdit;
     edCategoria: TEdit;
@@ -38,17 +36,13 @@ type
     edRG: TEdit;
     edCpf: TMaskEdit;
     edDataValidade: TDateTimePicker;
-    edDataNascimento: TDateTimePicker;
     edTelefone: TMaskEdit;
     edCelular: TMaskEdit;
-    edCidadeNascimento: TEdit;
-    btnLocalizarCidadeNascimento: TButton;
-    stNomeCidadeNascimento: TStaticText;
+    Label8: TLabel;
+    edDataNascimento: TDateTimePicker;
+    pnlCidade: TPanel;
     edCidade: TEdit;
     btnLocalizarCidade: TButton;
-    stNomeCidade: TStaticText;
-    procedure edCidadeNascimentoExit(Sender: TObject);
-    procedure btnLocalizarCidadeNascimentoClick(Sender: TObject);
     procedure btnLocalizarCidadeClick(Sender: TObject);
     procedure edCidadeExit(Sender: TObject);
     procedure btnSairClick(Sender: TObject);
@@ -99,20 +93,6 @@ begin
     edCidade.OnExit(btnLocalizarCidade);
 end;
 
-procedure TFrmCadastroMotorista.btnLocalizarCidadeNascimentoClick(
-  Sender: TObject);
-begin
-  edCidadeNascimento.Text := TfrmPesquisa.MostrarPesquisa(TOpcaoPesquisa
-    .Create
-    .DefineVisao(TBL_CIDADE)
-    .DefineNomeCampoRetorno(FLD_ENTIDADE_ID)
-    .DefineNomePesquisa(STR_CIDADE)
-    .AdicionaFiltro(FLD_CIDADE_NOME));
-
-  if Trim(edCidadeNascimento.Text) <> EmptyStr then
-    edCidadeNascimento.OnExit(btnLocalizarCidadeNascimento);
-end;
-
 procedure TFrmCadastroMotorista.btnSairClick(Sender: TObject);
 begin
 Self.Owner.Free;
@@ -121,18 +101,21 @@ end;
 procedure TFrmCadastroMotorista.edCidadeExit(Sender: TObject);
 var
   loCIDADE: TCIDADE;
+  numero: String;
 begin
   FMOTORISTA.CIDADE.ID := 0;
-  stNomeCidade.Caption := EmptyStr;
-  if StrToIntDef(edCidade.Text, 0) <> 0 then
+  numero             := edCidade.Text;
+  edCidade.Text      := EmptyStr;
+
+  if StrToIntDef(numero, 0) <> 0 then
     try
-      loCIDADE := TCIDADE(FRepositorioCidade.Retorna(StrToIntDef(edCidade.Text, 0)));
+      loCIDADE := TCIDADE(FRepositorioCidade.Retorna(StrToIntDef(numero, 0)));
       if loCIDADE = nil then
         raise EValidacaoNegocio.Create('Cidade informada não foi encontrada')
       else
         begin
-          FMOTORISTA.CIDADE    := loCIDADE;
-          stNomeCidade.Caption := FMOTORISTA.CIDADE.NOME;
+          FMOTORISTA.CIDADE   := loCIDADE;
+          edCidade.Text       := FMOTORISTA.CIDADE.NOME;
         end;
     except
       on E: Exception do
@@ -143,30 +126,6 @@ begin
     end;
 end;
 
-procedure TFrmCadastroMotorista.edCidadeNascimentoExit(Sender: TObject);
-var
-  loCIDADE: TCIDADE;
-begin
-  FMOTORISTA.CIDADE_NASCIMENTO.ID := 0;
-  stNomeCidadeNascimento.Caption  := EmptyStr;
-  if StrToIntDef(edCidadeNascimento.Text, 0) <> 0 then
-    try
-      loCIDADE := TCIDADE(FRepositorioCidade.Retorna(StrToIntDef(edCidadeNascimento.Text, 0)));
-      if loCIDADE = nil then
-        raise EValidacaoNegocio.Create('Cidade informada não foi encontrada')
-      else
-        begin
-          FMOTORISTA.CIDADE_NASCIMENTO   := loCIDADE;
-          stNomeCidadeNascimento.Caption := FMOTORISTA.CIDADE_NASCIMENTO.NOME;
-        end;
-    except
-      on E: Exception do
-        begin
-          TDialogo.Excecao(E);
-          edCidadeNascimento.SetFocus;
-        end;
-    end;
-end;
 
 procedure TFrmCadastroMotorista.Finaliza;
 begin
@@ -220,10 +179,10 @@ begin
   FMOTORISTA.CEP                 := edCep.Text;
   FMOTORISTA.CPF                 := edCpf.Text;
   FMOTORISTA.RG                  := edRG.Text;
-  FMOTORISTA.DATA_NASCIMENTO     := edDataNascimento.Date;
+  FMOTORISTA.DATA_NASCIMENTO     := edDataNascimento.DateTime;
   FMOTORISTA.CNH_NUMERO_REGISTRO := edRegistroCnh.Text;
   FMOTORISTA.CNH_CATEGORIA       := edCategoria.Text;
-  FMOTORISTA.CNH_DATA_VALIDADE   := edDataValidade.Date;
+  FMOTORISTA.CNH_DATA_VALIDADE   := edDataValidade.DateTime;
 end;
 
 procedure TFrmCadastroMotorista.PreencheFormulario;
@@ -241,10 +200,8 @@ begin
   edRegistroCnh.Text        := FMOTORISTA.CNH_NUMERO_REGISTRO;
   edCategoria.Text          := FMOTORISTA.CNH_CATEGORIA;
   edDataValidade.DateTime   := FMOTORISTA.CNH_DATA_VALIDADE;
-  edCidadeNascimento.Text   := IntTOStr(FMOTORISTA.CIDADE_NASCIMENTO.ID);
   edCidade.Text             := IntTOStr(FMOTORISTA.CIDADE.ID);
 
-  edCidadeNascimento.OnExit(Self);
   edCidade.OnExit(Self);
 end;
 

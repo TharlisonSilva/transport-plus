@@ -104,6 +104,7 @@ object frmPesquisa: TfrmPesquisa
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Tahoma'
+      Font.Pitch = fpFixed
       Font.Style = []
       ParentFont = False
       TabOrder = 1
@@ -124,6 +125,7 @@ object frmPesquisa: TfrmPesquisa
       Font.Color = clBlack
       Font.Height = -11
       Font.Name = 'Tahoma'
+      Font.Pitch = fpFixed
       Font.Style = []
       ParentCtl3D = False
       ParentFont = False
@@ -140,7 +142,13 @@ object frmPesquisa: TfrmPesquisa
     Align = alClient
     Color = clSilver
     FixedColor = clGradientInactiveCaption
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     ReadOnly = True
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

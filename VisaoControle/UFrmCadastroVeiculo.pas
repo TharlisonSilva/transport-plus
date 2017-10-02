@@ -7,7 +7,7 @@ uses
   Dialogs, UFrmCRUD, StdCtrls, Mask, ComCtrls, Menus, Buttons, ExtCtrls
   , UVeiculo
   , URegraCrudVeiculo
-  , UUtilitarios
+  , UUtilitarios, pngimage
   ;
 
 type
@@ -33,6 +33,7 @@ type
     GroupBox1: TGroupBox;
     edDescricao: TMemo;
     pnlConteudo: TPanel;
+    Image1: TImage;
     procedure btnSairClick(Sender: TObject);
   private
     FRegraCRUDVeiculo: TRegraCRUDVeiculo;

@@ -1,6 +1,6 @@
 {
-  @author: Felipe Silvino Pereira
-  @date: 01/08/2017
+  @author: Tharlison SIlva
+  @date: 20/08/2017
   @description: Entidade base para todas as tabelas que sofrerão operação de
                 CRUD no sistema.
 }

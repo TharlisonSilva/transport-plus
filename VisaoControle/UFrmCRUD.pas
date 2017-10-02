@@ -1,6 +1,6 @@
 {
-  @author: Felipe Silvino Pereira
-  @date: 01/08/2017
+  @author: Tharlison Silva
+  @date: 01/10/2017
   @description: Formulario base para geração de CRUDs utilizando as validações
                 que forem fornecedidas por uma classe filha de TRegraCRUD.
 }
@@ -17,7 +17,7 @@ uses
   , UEntidade
   , UFrmPesquisa
   , UOpcaoPesquisa
-  , Generics.Collections, Menus
+  , Generics.Collections, Menus, pngimage
   ;
 
 type
@@ -29,15 +29,15 @@ type
     lbCodigo: TLabel;
     btnLocalizar: TButton;
     pnlBotoes: TPanel;
-    btnLimpar: TBitBtn;
-    btnExcluir: TBitBtn;
-    btnGravar: TBitBtn;
-    btnSair: TBitBtn;
-    btnNovo: TBitBtn;
     pmOpcoes: TPopupMenu;
     edCodigo: TEdit;
     pnlCabecalho: TPanel;
     lbCabecalho: TLabel;
+    btnNovo: TImage;
+    btnGravar: TImage;
+    btnExcluir: TImage;
+    btnLimpar: TImage;
+    btnSair: TImage;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnSairClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -50,6 +50,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure edCodigoKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormDestroy(Sender: TObject);
+    procedure imgBtnLimparClick(Sender: TObject);
   private
     FENTIDADE: TENTIDADE;
 
@@ -274,6 +275,14 @@ begin
   btnGravar.Enabled     := FTipoOperacaoUsuario  in [touAtualizacao, touInsercao];
   btnExcluir.Enabled    := FTipoOperacaoUsuario  in [touAtualizacao, touExclusao];
   btnNovo.Enabled       := FTipoOperacaoUsuario  in [touIndefinida];
+end;
+
+procedure TFrmCRUD.imgBtnLimparClick(Sender: TObject);
+begin
+  LimpaCampos;
+  HabilitaCampos(touIndefinida);
+
+  edCodigo.SetFocus;
 end;
 
 procedure TFrmCRUD.Inicializa;

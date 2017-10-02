@@ -36,6 +36,7 @@ begin
     coEMPRESA.NOME_FANTASIA     := FieldByName(FLD_EMPRESA_NOME_FANTASIA).AsString;
     coEMPRESA.ENDERECO          := FieldByName(FLD_EMPRESA_ENDERECO).AsString;
     coEMPRESA.BAIRRO            := FieldByName(FLD_EMPRESA_BAIRRO).AsString;
+    coEMPRESA.CNPJ              := FieldByName(FLD_EMPRESA_CNPJ).AsString;
     coEMPRESA.INSC_ESTADUAL     := FieldByName(FLD_EMPRESA_INSC_ESTADUAL).AsString;
   end;
 end;
@@ -49,6 +50,7 @@ begin
     ParamByName(FLD_EMPRESA_NOME_FANTASIA).AsString   :=   coEMPRESA.NOME_FANTASIA;
     ParamByName(FLD_EMPRESA_ENDERECO).AsString        :=   coEMPRESA.ENDERECO;
     ParamByName(FLD_EMPRESA_BAIRRO).AsString          :=   coEMPRESA.BAIRRO;
+    ParamByName(FLD_EMPRESA_CNPJ).AsString            :=   coEMPRESA.CNPJ;
     ParamByName(FLD_EMPRESA_INSC_ESTADUAL).AsString   :=   coEMPRESA.INSC_ESTADUAL;
   end;
 end;

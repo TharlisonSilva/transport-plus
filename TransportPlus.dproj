@@ -67,8 +67,6 @@
 				<Form>FrmCRUD</Form>
 			</DCCReference>
 			<DCCReference Include="Modelo\UUtilitarios.pas"/>
-			<DCCReference Include="Modelo\UMensagens.pas"/>
-			<DCCReference Include="Modelo\UConstantes.pas"/>
 			<DCCReference Include="Modelo\UDialogo.pas"/>
 			<DCCReference Include="Modelo\UOpcaoPesquisa.pas"/>
 			<DCCReference Include="Modelo\Persistencia\UDM.pas">
@@ -98,21 +96,47 @@
 			<DCCReference Include="Modelo\Persistencia\UEmpresa.pas"/>
 			<DCCReference Include="Modelo\Persistencia\URepositorioEmpresa.pas"/>
 			<DCCReference Include="Modelo\Regra\URegraCRUDEmpresa.pas"/>
-			<DCCReference Include="Modelo\Persistencia\UFuncao.pas"/>
-			<DCCReference Include="Modelo\Persistencia\URepositorioFuncao.pas"/>
-			<DCCReference Include="Modelo\Persistencia\UNivel.pas"/>
-			<DCCReference Include="Modelo\Persistencia\URepositorioNivel.pas"/>
 			<DCCReference Include="Modelo\Persistencia\UUsuario.pas"/>
 			<DCCReference Include="Modelo\Persistencia\URepositorioUsuario.pas"/>
-			<DCCReference Include="Modelo\Regra\URegraCRUDUsuario.pas"/>
 			<DCCReference Include="Modelo\Persistencia\UOs.pas"/>
 			<DCCReference Include="Modelo\Persistencia\URepositorioOs.pas"/>
-			<DCCReference Include="Modelo\Regra\URegraCRUDOs.pas"/>
 			<DCCReference Include="VisaoControle\UFrmCadastroVeiculo.pas">
 				<Form>FrmCadastroVeiculo</Form>
 			</DCCReference>
 			<DCCReference Include="VisaoControle\UFrmCadastroCliente.pas">
 				<Form>FrmCadastroCliente</Form>
+			</DCCReference>
+			<DCCReference Include="VisaoControle\UFrmInicio.pas">
+				<Form>frmInicio</Form>
+			</DCCReference>
+			<DCCReference Include="VisaoControle\UFrmControledeUsuario.pas">
+				<Form>FrmCadastroUsuario</Form>
+			</DCCReference>
+			<DCCReference Include="Modelo\UUsuarioLogado.pas"/>
+			<DCCReference Include="Modelo\Persistencia\UPapel.pas"/>
+			<DCCReference Include="Modelo\Persistencia\URepositorioPapel.pas"/>
+			<DCCReference Include="Modelo\Regra\URegraCRUDUsuario.pas"/>
+			<DCCReference Include="Modelo\UConstantes.pas"/>
+			<DCCReference Include="Modelo\UMensagens.pas"/>
+			<DCCReference Include="VisaoControle\UFrmLogin.pas">
+				<Form>FrmLogin</Form>
+			</DCCReference>
+			<DCCReference Include="VisaoControle\UFrmCadastroOS.pas">
+				<Form>FrmCadastroOs</Form>
+			</DCCReference>
+			<DCCReference Include="Modelo\Regra\URegraCRUDOs.pas"/>
+			<DCCReference Include="Modelo\Persistencia\URepositorioPapelPermissao.pas"/>
+			<DCCReference Include="VisaoControle\UFrmInformacoes.pas">
+				<Form>frmInformacoes</Form>
+			</DCCReference>
+			<DCCReference Include="VisaoControle\UFrmEmpresa.pas">
+				<Form>FrmCadastroEmpresa</Form>
+			</DCCReference>
+			<DCCReference Include="VisaoControle\UFrmNotaBlu.pas">
+				<Form>FrmNotaBlu</Form>
+			</DCCReference>
+			<DCCReference Include="VisaoControle\UFrmTransporte.pas">
+				<Form>FrmTransporte</Form>
 			</DCCReference>
 			<BuildConfiguration Include="Debug">
 				<Key>Cfg_2</Key>
@@ -127,7 +151,7 @@
 			</BuildConfiguration>
 		</ItemGroup>
 		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
-		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
 		<ProjectExtensions>
 			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
 			<Borland.ProjectType>VCLApplication</Borland.ProjectType>

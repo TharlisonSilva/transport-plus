@@ -14,6 +14,7 @@ type
     ENDERECO        : String;
     BAIRRO          : String;
     INSC_ESTADUAL   : String;
+    CNPJ            : String;
 
     constructor Create; override;
     destructor Destroy; override;
@@ -24,10 +25,11 @@ const
   FLD_EMPRESA_NOME_FANTASIA    = 'NOME_FANTASIA';
   FLD_EMPRESA_ENDERECO         = 'ENDERECO';
   FLD_EMPRESA_BAIRRO           = 'BAIRRO';
-  FLD_EMPRESA_INSC_ESTADUAL            = 'INSC_ESTADUAL';
+  FLD_EMPRESA_INSC_ESTADUAL    = 'INSC_ESTADUAL';
+  FLD_EMPRESA_CNPJ             = 'CNPJ';
 
 resourcestring
-  STR_EMPRESA = 'EMPRESA';
+  STR_EMPRESA = 'Empresa';
 
 implementation
 

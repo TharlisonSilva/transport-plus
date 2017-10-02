@@ -15,7 +15,6 @@ type
     CELULAR:             String;
     ENDERECO:            String;
     BAIRRO:              String;
-    CIDADE:              TCIDADE;
     CEP:                 String;
     CPF:                 String;
     RG:                  String;
@@ -23,6 +22,7 @@ type
     DATA_EXPEDICAO:      TDate;
     DATA_NASCIMENTO:     TDate;
     CIDADE_NASCIMENTO:   TCIDADE;
+    CIDADE:              TCIDADE;
     CNH_NUMERO_REGISTRO: String;
     CNH_CATEGORIA:       String;
     CNH_DATA_VALIDADE:   TDate;
@@ -38,14 +38,13 @@ const
   FLD_MOTORISTA_CELULAR               = 'CELULAR';
   FLD_MOTORISTA_ENDERECO              = 'ENDERECO';
   FLD_MOTORISTA_BAIRRO                = 'BAIRRO';
-  FLD_MOTORISTA_ID_CIDADE             = 'ID_CIDADE';
+  FLD_MOTORISTA_CIDADE                = 'ID_CIDADE';
   FLD_MOTORISTA_CEP                   = 'CEP';
   FLD_MOTORISTA_CPF                   = 'CPF';
   FLD_MOTORISTA_RG                    = 'RG';
   FLD_MOTORISTA_ORGAO_EXPEDIDOR       = 'ORGAO_EXPEDIDOR';
   FLD_MOTORISTA_DATA_EXPEDICAO        = 'DATA_EXPEDICAO';
   FLD_MOTORISTA_DATA_NASCIMENTO       = 'DATA_NASCIMENTO';
-  FLD_MOTORISTA_ID_CIDADE_NASCIMENTO  = 'ID_CIDADE_NASCIMENTO';
   FLD_MOTORISTA_CNH_NUMERO_REGISTRO   = 'CNH_NUMERO_REGISTRO';
   FLD_MOTORISTA_CNH_CATEGORIA         = 'CNH_CATEGORIA';
   FLD_MOTORISTA_CNH_DATA_VALIDADE     = 'CNH_DATA_VALIDADE';
@@ -64,17 +63,13 @@ uses
 constructor TMOTORISTA.Create;
 begin
   inherited;
-  CIDADE := TCIDADE.Create;
-  CIDADE_NASCIMENTO := TCIDADE.Create;
+  CIDADE            := TCIDADE.Create;
 end;
 
 destructor TMOTORISTA.Destroy;
 begin
   if Assigned(CIDADE) then
     FreeAndNil(CIDADE);
-
-  if Assigned(CIDADE_NASCIMENTO) then
-    FreeAndNil(CIDADE_NASCIMENTO);
 
   inherited;
 end;

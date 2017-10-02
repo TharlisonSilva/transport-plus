@@ -10,8 +10,8 @@ uses
 type
   TCIDADE = class(TENTIDADE)
   public
-    NOME: String;
-    ESTADO: TESTADO;
+    NOME    : String;
+    ESTADO  : TESTADO;
 
     constructor Create; override;
     destructor Destroy; override;

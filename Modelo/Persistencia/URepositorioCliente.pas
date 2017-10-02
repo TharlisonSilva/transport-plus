@@ -40,8 +40,10 @@ begin
     coCLIENTE.CPF_CNPJ    := FieldByName(FLD_CLIENTE_CPF_CNPJ).AsString;
     coCLIENTE.ENDERECO    := FieldByName(FLD_CLIENTE_ENDERECO).AsString;
     coCLIENTE.BAIRRO      := FieldByName(FLD_CLIENTE_BAIRRO).AsString;
-    coCLIENTE.ID_CIDADE   := TCIDADE(FRepositorioCidade.Retorna(FieldByName(FLD_CLIENTE_ID_CIDADE).AsInteger));
-    coCLIENTE.CEP         :=  FieldByName(FLD_CLIENTE_CEP).AsString;
+    coCLIENTE.CIDADE      := TCIDADE(FRepositorioCidade.Retorna(FieldByName(FLD_CLIENTE_CIDADE).AsInteger));
+    coCLIENTE.CEP         := FieldByName(FLD_CLIENTE_CEP).AsString;
+    coCLIENTE.DESCRICAO   := FieldByName(FLD_CLIENTE_DESCRICAO).AsString;
+
   end;
 end;
 
@@ -55,18 +57,23 @@ begin
     ParamByName(FLD_CLIENTE_CPF_CNPJ).AsString   := coCLIENTE.CPF_CNPJ;
     ParamByName(FLD_CLIENTE_ENDERECO).AsString   := coCLIENTE.ENDERECO;
     ParamByName(FLD_CLIENTE_BAIRRO).AsString     := coCLIENTE.BAIRRO;
-    ParamByName(FLD_CLIENTE_ID_CIDADE).AsInteger := coCLIENTE.ID_CIDADE.ID;
+    ParamByName(FLD_CLIENTE_CIDADE).AsInteger    := coCLIENTE.CIDADE.ID;
     ParamByName(FLD_CLIENTE_CEP).AsString        := coCLIENTE.CEP;
+    ParamByName(FLD_CLIENTE_DESCRICAO).AsString  := coCLIENTE.DESCRICAO;
   end;
 end;
 
 constructor TRepositorioCliente.Create;
 begin
   inherited Create(TCLIENTE, TBL_CLIENTE, FLD_ENTIDADE_ID, STR_CLIENTE);
+
+  FRepositorioCidade := TRepositorioCidade.Create;
 end;
 
 destructor TRepositorioCliente.Destroy;
 begin
+
+  FreeAndNil(FRepositorioCidade);
   inherited;
 end;
 

@@ -1,8 +1,8 @@
 object dmEntra21: TdmEntra21
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Height = 97
-  Width = 183
+  Height = 107
+  Width = 186
   object SQLConnection: TSQLConnection
     ConnectionName = 'IBConnection'
     DriverName = 'Firebird'
@@ -30,7 +30,7 @@ object dmEntra21: TdmEntra21
       'LibraryName=dbx4fb.dll'
       'VendorLib=fdbclient.dll'
       
-        'Database=localhost:D:\Projeto\transport-plus\BD\TRANSPORTPLUS.FD' +
+        'Database=localhost:F:\Projeto\transport-plus\BD\TRANSPORTPLUS.FD' +
         'B'
       'User_Name=sysdba'
       'Password=masterkey'

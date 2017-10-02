@@ -4,7 +4,6 @@ inherited FrmCadastroVeiculo: TFrmCadastroVeiculo
   Caption = 'Cadastro Veiculo'
   ClientHeight = 595
   ClientWidth = 576
-  FormStyle = fsMDIForm
   Position = poDesktopCenter
   ExplicitWidth = 576
   ExplicitHeight = 595
@@ -12,18 +11,14 @@ inherited FrmCadastroVeiculo: TFrmCadastroVeiculo
   TextHeight = 13
   object pnlConteudo: TPanel [0]
     Left = 0
-    Top = 107
+    Top = 113
     Width = 576
-    Height = 431
+    Height = 425
     Align = alClient
     BevelOuter = bvNone
     Color = 9658417
     ParentBackground = False
     TabOrder = 3
-    ExplicitLeft = 200
-    ExplicitTop = 280
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Label10: TLabel
       Left = 185
       Top = 136
@@ -320,42 +315,61 @@ inherited FrmCadastroVeiculo: TFrmCadastroVeiculo
   end
   inherited gbLocalizar: TGroupBox
     Width = 576
-    ExplicitWidth = 570
-    inherited btnLocalizar: TButton
-      Top = 22
-      ExplicitTop = 22
-    end
+    ExplicitWidth = 576
     inherited edCodigo: TEdit
-      Top = 22
       Color = clBtnHighlight
-      ExplicitTop = 22
     end
   end
   inherited pnlBotoes: TPanel
     Top = 538
     Width = 576
-    ExplicitTop = 509
-    ExplicitWidth = 570
-    inherited btnLimpar: TBitBtn
-      Left = 341
-      ExplicitLeft = 335
+    ExplicitTop = 538
+    ExplicitWidth = 576
+    inherited btnGravar: TImage
+      Left = 311
+      ExplicitLeft = 311
     end
-    inherited btnExcluir: TBitBtn
-      Left = 212
-      ExplicitLeft = 206
+    inherited btnExcluir: TImage
+      Left = 389
+      ExplicitLeft = 389
     end
-    inherited btnGravar: TBitBtn
-      Left = 107
-      ExplicitLeft = 101
+    inherited btnLimpar: TImage
+      Left = 468
+      ExplicitLeft = 468
     end
-    inherited btnSair: TBitBtn
-      Left = 458
-      ExplicitLeft = 452
+    object Image1: TImage
+      Left = 533
+      Top = 13
+      Width = 35
+      Height = 35
+      Cursor = crHandPoint
+      Hint = 'Sair'
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Center = True
+      Picture.Data = {
+        0954506E67496D61676589504E470D0A1A0A0000000D49484452000000230000
+        002308060000001ED9B3590000019E4944415478DAED988F55833010C6C304B2
+        41E904760370027502E9067502E904BA41EB04EA067402DB091A36A813E077F6
+        F485BCD0E4D113FAB4DF7BF78E7F397E847039122987EABA8EE11E61192C5172
+        D2B012761F45D1CE3E19B5806C61B120842D0219DB402E9825DC1DEF56FC3452
+        4A6023DE7E064CEE83D972A30A1727D25D82F89A8134E28F7D30356FAE7071F6
+        0B30255CFA7573E80C738631E2A468BF721C7F85BBEE0D0621666A9F34E9C653
+        339F701EA3E3695F3005DC03EFAE61577682A37C169267A461481A768B78EB43
+        EDFA8221ED18A81483C1E989E2017840199B4B3486965230EF70932E3D66A840
+        ECB9044CAD644403787A2A30A4C69736340CE9A794181A6603CB4EA167828A2B
+        1F0CBDE7CB2341E6885DD807BBE6991BCFCDA85DDA724E2ECF84A825037FD043
+        8866E08E3015830C3E3735BE18E39AC5D1492F1026875BC0DE60B9A39E7961C0
+        DE2ABDCC353E7AAFF43C9004F88F0BF23F09A355CBBFB010CCF7BFFC06F11B45
+        9A6F15422BF9558884B78326CA98012EA47BC5104D0D89777DC6007A52FB096F
+        E40D1D2E9A164AD8CCB572F509ADF5623301C54BE90000000049454E44AE4260
+        82}
+      OnClick = btnSairClick
     end
   end
   inherited pnlCabecalho: TPanel
     Width = 576
-    ExplicitWidth = 570
+    ExplicitWidth = 576
     inherited lbCabecalho: TLabel
       Width = 216
       Caption = 'Cadastro Veiculo'
