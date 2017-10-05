@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, ComCtrls, Grids, DBGrids
-  , UDM
+  , UDM, pngimage
   ;
 
 type
@@ -26,6 +26,10 @@ type
     Button3: TButton;
     Label3: TLabel;
     dbOS: TDBGrid;
+    pnlBotoes: TPanel;
+    btnSair: TImage;
+    pnlImprimir: TPanel;
+    procedure btnSairClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,6 +45,11 @@ implementation
 
 
 { TFrmTransporte }
+
+procedure TFrmTransporte.btnSairClick(Sender: TObject);
+begin
+  Self.Owner.Free;
+end;
 
 procedure TFrmTransporte.inicializa;
 begin

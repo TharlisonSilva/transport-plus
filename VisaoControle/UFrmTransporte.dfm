@@ -2,7 +2,7 @@ object FrmTransporte: TFrmTransporte
   Left = 0
   Top = 0
   Caption = 'TRANSPORTE'
-  ClientHeight = 394
+  ClientHeight = 472
   ClientWidth = 762
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -5260,7 +5260,6 @@ object FrmTransporte: TFrmTransporte
     Color = 9658417
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 753
     object Label10: TLabel
       Left = 8
       Top = 6
@@ -5341,7 +5340,6 @@ object FrmTransporte: TFrmTransporte
         NumbersOnly = True
         ParentFont = False
         TabOrder = 0
-        ExplicitHeight = 25
       end
       object Button1: TButton
         Left = 176
@@ -5359,9 +5357,6 @@ object FrmTransporte: TFrmTransporte
         ParentFont = False
         TabOrder = 1
         TabStop = False
-        ExplicitLeft = 152
-        ExplicitTop = 3
-        ExplicitHeight = 30
       end
     end
     object Panel1: TPanel
@@ -5392,9 +5387,6 @@ object FrmTransporte: TFrmTransporte
         NumbersOnly = True
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = -5
-        ExplicitTop = 8
-        ExplicitHeight = 28
       end
       object Button2: TButton
         Left = 176
@@ -5412,7 +5404,6 @@ object FrmTransporte: TFrmTransporte
         ParentFont = False
         TabOrder = 1
         TabStop = False
-        ExplicitHeight = 28
       end
     end
     object DateTimePicker1: TDateTimePicker
@@ -5471,12 +5462,30 @@ object FrmTransporte: TFrmTransporte
         TabStop = False
       end
     end
+    object pnlImprimir: TPanel
+      Left = 557
+      Top = 27
+      Width = 185
+      Height = 26
+      Cursor = crHandPoint
+      BevelOuter = bvNone
+      Caption = 'IMPRIMIR'
+      Color = 9803082
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 4
+    end
   end
   object dbOS: TDBGrid
     Left = 0
     Top = 113
     Width = 762
-    Height = 281
+    Height = 302
     Align = alClient
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
@@ -5484,5 +5493,56 @@ object FrmTransporte: TFrmTransporte
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object pnlBotoes: TPanel
+    Left = 0
+    Top = 415
+    Width = 762
+    Height = 57
+    Align = alBottom
+    BevelOuter = bvNone
+    Color = 7621415
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 2
+    ExplicitWidth = 759
+    DesignSize = (
+      762
+      57)
+    object btnSair: TImage
+      Left = 707
+      Top = 13
+      Width = 35
+      Height = 35
+      Cursor = crHandPoint
+      Hint = 'Sair'
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Center = True
+      Picture.Data = {
+        0954506E67496D61676589504E470D0A1A0A0000000D49484452000000230000
+        002308060000001ED9B3590000019E4944415478DAED988F55833010C6C304B2
+        41E904760370027502E9067502E904BA41EB04EA067402DB091A36A813E077F6
+        F485BCD0E4D113FAB4DF7BF78E7F397E847039122987EABA8EE11E61192C5172
+        D2B012761F45D1CE3E19B5806C61B120842D0219DB402E9825DC1DEF56FC3452
+        4A6023DE7E064CEE83D972A30A1727D25D82F89A8134E28F7D30356FAE7071F6
+        0B30255CFA7573E80C738631E2A468BF721C7F85BBEE0D0621666A9F34E9C653
+        339F701EA3E3695F3005DC03EFAE61577682A37C169267A461481A768B78EB43
+        EDFA8221ED18A81483C1E989E2017840199B4B3486965230EF70932E3D66A840
+        ECB9044CAD644403787A2A30A4C69736340CE9A794181A6603CB4EA167828A2B
+        1F0CBDE7CB2341E6885DD807BBE6991BCFCDA85DDA724E2ECF84A825037FD043
+        8866E08E3015830C3E3735BE18E39AC5D1492F1026875BC0DE60B9A39E7961C0
+        DE2ABDCC353E7AAFF43C9004F88F0BF23F09A355CBBFB010CCF7BFFC06F11B45
+        9A6F15422BF9558884B78326CA98012EA47BC5104D0D89777DC6007A52FB096F
+        E40D1D2E9A164AD8CCB572F509ADF5623301C54BE90000000049454E44AE4260
+        82}
+      OnClick = btnSairClick
+      ExplicitLeft = 704
+    end
   end
 end

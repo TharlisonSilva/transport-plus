@@ -1,6 +1,6 @@
 inherited FrmCadastroCliente: TFrmCadastroCliente
   Tag = 3
-  Caption = 'Cadastro Cliente'
+  Caption = 'CADASTRO CLIENTE'
   ClientHeight = 512
   ClientWidth = 654
   Icon.Data = {
@@ -5502,8 +5502,6 @@ inherited FrmCadastroCliente: TFrmCadastroCliente
         ParentFont = False
         TabOrder = 0
         OnExit = edCidadeExit
-        ExplicitWidth = 219
-        ExplicitHeight = 24
       end
       object btnLocalizarCidade: TButton
         Left = 250
@@ -5522,8 +5520,6 @@ inherited FrmCadastroCliente: TFrmCadastroCliente
         TabOrder = 1
         TabStop = False
         OnClick = btnLocalizarCidadeClick
-        ExplicitLeft = 226
-        ExplicitHeight = 30
       end
     end
   end
@@ -5537,20 +5533,20 @@ inherited FrmCadastroCliente: TFrmCadastroCliente
     ExplicitTop = 455
     ExplicitWidth = 654
     inherited btnGravar: TImage
-      Left = 185
-      ExplicitLeft = 191
+      Left = 266
+      ExplicitLeft = 266
     end
     inherited btnExcluir: TImage
-      Left = 298
-      ExplicitLeft = 304
+      Left = 379
+      ExplicitLeft = 379
     end
     inherited btnLimpar: TImage
-      Left = 419
-      ExplicitLeft = 425
+      Left = 500
+      ExplicitLeft = 500
     end
     inherited btnSair: TImage
-      Left = 536
-      ExplicitLeft = 542
+      Left = 601
+      ExplicitLeft = 601
     end
   end
   inherited pnlCabecalho: TPanel

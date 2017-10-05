@@ -1,7 +1,7 @@
 inherited FrmCadastroVeiculo: TFrmCadastroVeiculo
   Tag = 2
   BorderStyle = bsNone
-  Caption = 'Cadastro Veiculo'
+  Caption = 'CADASTRO VEICULO'
   ClientHeight = 595
   ClientWidth = 576
   Position = poDesktopCenter

@@ -1,6 +1,6 @@
 inherited FrmCadastroUsuario: TFrmCadastroUsuario
   Tag = 4
-  Caption = 'Controle de Usuario'
+  Caption = 'CADASTRO USUARIO'
   ClientHeight = 612
   ClientWidth = 759
   Icon.Data = {

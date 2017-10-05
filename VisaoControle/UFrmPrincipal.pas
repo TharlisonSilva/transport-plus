@@ -214,11 +214,11 @@ begin
         end;
     end;
 
-  //CRIA UMA NOVA ABA
+
   Aba := TTabSheet.Create(pgcPrincipal);
   Aba.PageControl := pgcPrincipal;
 
-  //CRIA UM NOVO FORMULARIO
+
   NovoForm             := CNT_CLASSE_TIPO_FORMULARIO[TTipoFormulario(Tag)].Create(Aba);
   NovoForm.Parent      := Aba;
   NovoForm.Align       := alClient;
@@ -229,7 +229,7 @@ begin
   Aba.Caption := NovoForm.Caption;
   Aba.Tag     := Tag;
 
-  //ATIVA A ABA
+
   pgcPrincipal.ActivePage := Aba;
 end;
 
